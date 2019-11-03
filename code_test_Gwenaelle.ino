@@ -10,7 +10,7 @@ const int SA = 12; // Led representant l'etat de l'entrée A
 const int SB = 11; // Led representant l'etat de l'entrée B
 const int S = 4;   // Led representant l'etat de la sortie de la porte logiue
 const int EA = 3;  // entre 3 symbolisant l'entrée A de la porte logique
-const int EB = 2;  // entre 3 symbolisant l'entrée A de la porte logique
+const int EB = 2;  // entre 3 symbolisant l'entrée B de la porte logique
 
 bool EtatA; // type boolean --> pour stocker uniquement les etat 0 et 1 (false et true) il n'est pas utile de crér une variable de type int 
 bool EtatB;
@@ -20,8 +20,8 @@ void setup() {
 pinMode(SA, OUTPUT);// déclaration de la broche SA (12) en sortie
 pinMode(SB, OUTPUT);// déclaration de la broche SB (11) en sortie
 pinMode(S, OUTPUT); // déclaration de la broche S   (4) en sortie
-pinMode(EA, INPUT); // déclaration de la broche SA  (3) en entrée
-pinMode(EB, INPUT); // déclaration de la broche SA  (2) en entrée
+pinMode(EA, INPUT); // déclaration de la broche EA  (3) en entrée
+pinMode(EB, INPUT); // déclaration de la broche EB  (2) en entrée
 
 }
 
@@ -40,7 +40,7 @@ digitalWrite(S, EtatS);
 //PORTE ET
 /*digitalWrite(SA, EtatA);
 digitalWrite(SB, EtatB);
-if (EtatA && EtatB){ // si l'entree A et B sont a un niveau haut --> sortie en niveau.
+if (EtatA && EtatB){ // si l'entree A et B sont a un niveau haut --> sortie en niveau haut.
   EtatS = 1;
   digitalWrite(S, EtatS);
   }else{             // sinon sortie en niveau bas (cf tableau sur les portes logiques)
